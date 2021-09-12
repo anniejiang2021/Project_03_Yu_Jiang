@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+ 
+
+<body> <%- include('../partials/header') %>
+<h1>ADD NEW SCHEDULE</h1>
+
+<div >
+<form  action="/posts/new" method="POST" >
+<div > 
+<label for="user" >User</label>
+<select id="user" name="user" >
+<% users.forEach((user) => { %>
+<option><%= user.firstname %> <%= user.lastname %> </option>
+<% }) %>
+</select>
+</div>
+<div >
+<label for="day" >Day of the week</label>
+<select  name="day" id="day">
+<option selected>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+</select>
+</div>
+<div class="">
+<label for="start_at" >Start time</label>
+<input name="start_at" id="start_at" type="time" >
+</div>
+<div class="mb-3">
+<label for="end_at" >End time</label>
+<input name="end_at" id="end_at" type="time" >
+</div>
+<button type="submit" >Submit</button>
+</form>
+</div>
+
+<!-- form validation js script -->
+<!-- <script type="module" src="/validatenewpost.js"></script> -->
+
+</body>
+</html>

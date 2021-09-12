@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   
+
+    <title>Users</title>
+
+    <!-- insert header -->
+    <%- include('../partials/header') %>
+    <h1 class="text-center">User details of <%= user.firstname %> <%= user.lastname %>: </h1>
+        <div >          
+                <div >
+                    <div >
+                        <div >
+                            <!-- <h5 >Information about the user:</h5> -->
+                            <ul >
+                                <li ><b>Firstname:</b> <%= user.firstname %>  </li>
+                                <li ><b>Surname:</b> <%= user.lastname %> </li>
+                                <li ><b>UserID:</b> <%= user.id %> </li>
+                                <li ><b>Email:</b> <%= user.email %> </li>
+                                <li ><b>Password:</b> <%= user.password %> </li>
+                            </ul>
+                          
+                            <!-- <a href="/posts/<%#= posts.user_id %> " >All schedules of this User</a> -->
+                            <a href="/users" >Back to all Users</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+
+
+
+</body>
+</html>
