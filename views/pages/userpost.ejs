@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user's schedules</title>
+</head>
+<body>
+
+    <h1>Schedule/s of <%= user.firstname %> <%= user.lastname %>:  </h1>
+    <table border="1px solid black">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Start Time</th>
+                <th>End time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let post of posts) { %>
+                <tr>
+                    <td><%= post.day %></td>
+                    <td><%= post.start_at %></td>
+                    <td><%= post.end_at %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <a href="/users/<%= user.id %> " >this user's information</a>
+
+</body>
+</html>

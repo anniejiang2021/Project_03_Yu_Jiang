@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+         <title>Schedules</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+     <%- include('../partials/header') %>
+        <main>
+            <h1>
+           ALL Schedules
+            </h1>
+            <!-- insert schedules -->
+           
+               
+                <div >
+                    <a href="/posts/new" class="btn newschedule">Create new schedule</a>
+                    <% posts.forEach((post, index) => { %> 
+                    <div >
+                        <div >
+                            <div >
+                                <h5 >Schedule <%= index + 1 %></h5>
+                                <ul >
+                                    <li ><b>User name:</b> <%= post.username %>  </li>
+                                    <li ><b>Day:</b> <%= post.day %> </li>
+                                    <li ><b>Starts at:</b> <%= post.start_at %> </li>
+                                    <li ><b>Finishes at:</b> <%= post.end_at %> </li>
+                                </ul>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %> 
+                </div>
+                
+        </main>
+        <!-- insert footer -->
+   
+</body>
+</html>

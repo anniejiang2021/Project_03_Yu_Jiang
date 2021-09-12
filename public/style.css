@@ -1,0 +1,29 @@
+*,*::before,*::after {margin: 0;padding: 0;box-sizing: border-box;}
+ 
+ 
+body{font-family:Arial, Helvetica, sans-serif ;text-align: center;line-height: 1.5;
+background-color:aliceblue(180, 164, 164)}
+main {margin: 100px;}
+header {margin-left:auto;margin-right:auto;}
+
+
+
+
+nav a{color: black;text-decoration: none;
+    padding-left: 10px;
+padding-right: 10px;}
+nav ul {list-style-type: none;}
+nav ul li {display: inline;margin: left 2rem ;
+    padding-right: 20px;}
+
+
+#newuser-form {
+text-align: left;align-content: center;
+    margin-left: auto;margin-right: auto;width: 60%;
+}
+#newuser-form.label {font-size: 30px;display: block;text-align: left;margin-top: 20px;margin-bottom: 20px;}
+#newuser-form.input {font-size: 60px;background-color:rgb(211, 211, 211);width:100%}
+
+#newuser-form.submit{    width: 30%;height: 50px;font-size: 20px;font-weight: bold;
+    background-color: rgb(109, 113, 117);color: whitesmoke; border-radius: 10px;
+    margin-top: 100px;margin-bottom:100px;padding: 10px;;}

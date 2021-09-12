@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+  <form action="/users/new" method="post" id="newuser-form">
+        <div>
+          <label for="firstname">First Name:</label>
+          <input id="firstname" type="text" name="name">
+        </div>
+    
+        <div>
+          <label for="lastname">Surname:</label>
+          <input type="text" id="lastname" name="lastname">
+       
+        </div>
+        <div>
+          <label for="email" >Email address</label>
+<input type="email"  id="email" name="email" >
+        </div>
+    
+        <div>
+          <label for="password" >Password</label>
+<input type="password"  id="password" name="password">
+        </div>
+    
+        <button type="submit" >Submit</button>
+      </form>  
+</body>
+</html>
+
+<script type="module" src="/validatenewuser.js">
+
+</script>
